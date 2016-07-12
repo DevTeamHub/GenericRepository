@@ -1,0 +1,18 @@
+﻿<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>DevTeam.GenericRepository</id>
+    <version>1.0.2</version>
+    <title>DevTeam.GenericRepository</title>
+    <authors>Dev Team Inc.</authors>
+    <owners>Dev Team Inc.</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Generic Repository for EntityFramework.</description>
+    <copyright>Copyright 2016</copyright>
+    <tags>EntityFramework IQueryable Expression Repository</tags>
+    <dependencies>
+      <dependency id="EntityFramework" version="6.1.3" />
+      <dependency id="DevTeam.EntityFrameworkExtensions" version="1.0.0" />
+    </dependencies>
+  </metadata>
+</package>
