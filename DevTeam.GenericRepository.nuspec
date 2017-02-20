@@ -4,6 +4,7 @@
     <id>DevTeam.GenericRepository</id>
     <version>1.0.2</version>
     <title>DevTeam.GenericRepository</title>
+    <iconUrl>http://dev-team.com/img/devteam.png</iconUrl>
     <authors>Dev Team Inc.</authors>
     <owners>Dev Team Inc.</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
