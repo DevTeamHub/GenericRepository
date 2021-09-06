@@ -6,7 +6,7 @@
     <Nullable>enable</Nullable>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <PackageId>DevTeam.GenericRepository</PackageId>
-    <Version>3.0.0</Version>
+    <Version>3.1.0</Version>
     <Authors>dimabezzubenkov, dev-team</Authors>
     <Company>Dev Team, Inc</Company>
     <Copyright>Copyright (c) Dev Team, Inc 2021.</Copyright>
@@ -20,7 +20,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="DevTeam.EntityFrameworkExtensions" Version="3.0.0" />
+    <PackageReference Include="DevTeam.EntityFrameworkExtensions" Version="3.1.0" />
   </ItemGroup>
 
   <ItemGroup>
