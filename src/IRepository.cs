@@ -83,6 +83,6 @@ namespace DevTeam.GenericRepository
         void Delete<TEntity>(TEntity entity)
             where TEntity : class;
         int Save();
-        Task<int> Save(CancellationToken cancellationToken = default);
+        Task<int> SaveAsync(CancellationToken cancellationToken = default);
     }
 }

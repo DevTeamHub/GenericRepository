@@ -248,7 +248,7 @@ namespace DevTeam.GenericRepository
             return Context.SaveChanges();
         }
 
-        public virtual Task<int> Save(CancellationToken cancellationToken = default)
+        public virtual Task<int> SaveAsync(CancellationToken cancellationToken = default)
         {
             return Context.SaveChangesAsync();
         }
