@@ -5,7 +5,9 @@ VisualStudioVersion = 17.0.31612.314
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DevTeam.GenericRepository", "DevTeam.GenericRepository.csproj", "{6A744279-628A-4D21-BEE3-696F5033F2BC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevTeam.GenericRepository.AspNetCore", "..\DevTeam.GenericRepository.AspNetCore\DevTeam.GenericRepository.AspNetCore.csproj", "{E66111DB-0CAE-47E1-B168-7625B4DA14E6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DevTeam.GenericRepository.AspNetCore", "..\DevTeam.GenericRepository.AspNetCore\DevTeam.GenericRepository.AspNetCore.csproj", "{E66111DB-0CAE-47E1-B168-7625B4DA14E6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DevTeam.GenericRepository.Tests", "..\DevTeam.GenericRepository.Tests\DevTeam.GenericRepository.Tests.csproj", "{20D34F1C-F18A-4B3D-AF2B-5A9ACAF8C17B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{E66111DB-0CAE-47E1-B168-7625B4DA14E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E66111DB-0CAE-47E1-B168-7625B4DA14E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E66111DB-0CAE-47E1-B168-7625B4DA14E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20D34F1C-F18A-4B3D-AF2B-5A9ACAF8C17B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20D34F1C-F18A-4B3D-AF2B-5A9ACAF8C17B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20D34F1C-F18A-4B3D-AF2B-5A9ACAF8C17B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20D34F1C-F18A-4B3D-AF2B-5A9ACAF8C17B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

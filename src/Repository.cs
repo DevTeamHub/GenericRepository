@@ -9,11 +9,19 @@ using Microsoft.EntityFrameworkCore;
 
 namespace DevTeam.GenericRepository
 {
-    public class Repository : IRepository
+    public class Repository: Repository<IDbContext>, IRepository
     {
-        protected readonly IDbContext Context;
-
         public Repository(IDbContext context)
+            :base(context)
+        { }
+    }
+
+    public class Repository<TContext> : IRepository<TContext>
+        where TContext: IDbContext
+    {
+        protected readonly TContext Context;
+
+        public Repository(TContext context)
         {
             Context = context;
         }
@@ -31,7 +39,7 @@ namespace DevTeam.GenericRepository
 
             if (typeof(IDeleted).IsAssignableFrom(typeof(TEntity)))
             {
-                query = (IQueryable<TEntity>)((IQueryable<IDeleted>) query).Where(x => !x.IsDeleted);
+                query = ((IQueryable<IDeleted>)query).Where(x => !x.IsDeleted).Cast<TEntity>();
             }
 
             return query;

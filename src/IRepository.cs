@@ -8,16 +8,32 @@ using DevTeam.EntityFrameworkExtensions;
 
 namespace DevTeam.GenericRepository
 {
+    public interface IReadOnlyRepository<TContext> : IRepository<TContext>
+        where TContext : IDbContext
+    { }
+
     public interface IReadOnlyRepository: IRepository 
+    { }
+
+    public interface ISoftDeleteRepository<TContext> : IRepository<TContext>
+        where TContext : IDbContext
     { }
 
     public interface ISoftDeleteRepository: IRepository
     { }
 
+    public interface IReadOnlyDeleteRepository<TContext> : IRepository<TContext>
+        where TContext : IDbContext
+    { }
+
     public interface IReadOnlyDeleteRepository: IRepository
     { }
 
-    public interface IRepository
+    public interface IRepository: IRepository<IDbContext>
+    { }
+
+    public interface IRepository<TContext>
+        where TContext: IDbContext
     {
         IQueryable<TEntity> Query<TEntity>()
             where TEntity : class;

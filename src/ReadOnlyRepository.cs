@@ -4,9 +4,17 @@ using System.Linq;
 
 namespace DevTeam.GenericRepository
 {
-    public class ReadOnlyRepository: Repository, IReadOnlyRepository
+    public class ReadOnlyRepository : ReadOnlyRepository<IDbContext>, IReadOnlyRepository
     {
         public ReadOnlyRepository(IDbContext context)
+            : base(context)
+        { }
+    }
+
+    public class ReadOnlyRepository<TContext>: Repository<TContext>, IReadOnlyRepository<TContext>
+        where TContext : IDbContext
+    {
+        public ReadOnlyRepository(TContext context)
             :base(context)
         { }
 

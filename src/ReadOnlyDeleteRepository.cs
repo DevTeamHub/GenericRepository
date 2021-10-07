@@ -3,9 +3,17 @@ using System.Linq;
 
 namespace DevTeam.GenericRepository
 {
-    public class ReadOnlyDeleteRepository: ReadOnlyRepository, IReadOnlyDeleteRepository
+    public class ReadOnlyDeleteRepository : ReadOnlyDeleteRepository<IDbContext>, IReadOnlyDeleteRepository
     {
         public ReadOnlyDeleteRepository(IDbContext context)
+            : base(context)
+        { }
+    }
+
+    public class ReadOnlyDeleteRepository<TContext>: ReadOnlyRepository<TContext>, IReadOnlyDeleteRepository<TContext>
+        where TContext: IDbContext
+    {
+        public ReadOnlyDeleteRepository(TContext context)
             : base(context)
         { }
 
