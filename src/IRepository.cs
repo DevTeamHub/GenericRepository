@@ -12,21 +12,21 @@ namespace DevTeam.GenericRepository
         where TContext : IDbContext
     { }
 
-    public interface IReadOnlyRepository: IRepository 
+    public interface IReadOnlyRepository: IReadOnlyRepository<IDbContext> 
     { }
 
     public interface ISoftDeleteRepository<TContext> : IRepository<TContext>
         where TContext : IDbContext
     { }
 
-    public interface ISoftDeleteRepository: IRepository
+    public interface ISoftDeleteRepository: ISoftDeleteRepository<IDbContext>
     { }
 
     public interface IReadOnlyDeleteRepository<TContext> : IRepository<TContext>
         where TContext : IDbContext
     { }
 
-    public interface IReadOnlyDeleteRepository: IRepository
+    public interface IReadOnlyDeleteRepository: IReadOnlyDeleteRepository<IDbContext>
     { }
 
     public interface IRepository: IRepository<IDbContext>
