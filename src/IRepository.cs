@@ -98,6 +98,12 @@ namespace DevTeam.GenericRepository
             where TEntity : class;
         void Delete<TEntity>(TEntity entity)
             where TEntity : class;
+        void DeleteRange<TEntity>(Expression<Func<TEntity, bool>> filter)
+            where TEntity : class;
+        Task DeleteRangeAsync<TEntity>(Expression<Func<TEntity, bool>> filter)
+            where TEntity : class;
+        void DeleteRange<TEntity>(List<TEntity> entities)
+            where TEntity : class;
         int Save();
         Task<int> SaveAsync(CancellationToken cancellationToken = default);
     }

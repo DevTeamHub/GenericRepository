@@ -251,6 +251,40 @@ namespace DevTeam.GenericRepository
             }
         }
 
+        public virtual void DeleteRange<TEntity>(Expression<Func<TEntity, bool>> filter)
+            where TEntity : class
+        {
+            var entities = GetList(filter).ToList();
+            DeleteRange(entities);
+        }
+
+        public virtual async Task DeleteRangeAsync<TEntity>(Expression<Func<TEntity, bool>> filter)
+            where TEntity : class
+        {
+            var entities = await GetList(filter).ToListAsync();
+            DeleteRange(entities);
+        }
+
+        public virtual void DeleteRange<TEntity>(List<TEntity> entities)
+            where TEntity : class
+        {
+            if (typeof(TEntity).IsAssignableFrom(typeof(IDeleted)))
+            {
+                entities.ForEach(entity =>
+                {
+                    if (entity is IDeleted deleted)
+                    {
+                        deleted.IsDeleted = true;
+                        Update(entity);
+                    }
+                });
+            }
+            else
+            {
+                Context.Set<TEntity>().RemoveRange(entities);
+            }
+        }
+
         public virtual int Save()
         {
             return Context.SaveChanges();
