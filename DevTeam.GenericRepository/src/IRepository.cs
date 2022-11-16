@@ -22,7 +22,7 @@ namespace DevTeam.GenericRepository
     public interface ISoftDeleteRepository: ISoftDeleteRepository<IDbContext>
     { }
 
-    public interface IReadOnlyDeleteRepository<TContext> : IRepository<TContext>
+    public interface IReadOnlyDeleteRepository<TContext> : IReadOnlyRepository<TContext>
         where TContext : IDbContext
     { }
 
