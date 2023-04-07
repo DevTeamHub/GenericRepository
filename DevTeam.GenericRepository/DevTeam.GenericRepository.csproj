@@ -9,7 +9,7 @@
     <Version>3.5.0</Version>
     <Authors>dimabezzubenkov, dev-team</Authors>
     <Company>Dev Team, Inc</Company>
-    <Copyright>Copyright (c) Dev Team, Inc 2021.</Copyright>
+    <Copyright>Copyright (c) Dev Team, Inc 2023.</Copyright>
     <Description>Generic Repository implementation for Entity Framework.</Description>
     <PackageIcon>icon.png</PackageIcon>
     <PackageReadmeFile>README.md</PackageReadmeFile>
@@ -17,10 +17,11 @@
     <RepositoryType>git</RepositoryType>
     <PackageTags>Repository;EntityFramework;IQueryable;</PackageTags>
     <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
+	<LangVersion>latest</LangVersion>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="DevTeam.EntityFrameworkExtensions" Version="3.1.0" />
+    <PackageReference Include="DevTeam.EntityFrameworkExtensions" Version="3.5.0" />
   </ItemGroup>
 
   <ItemGroup>
