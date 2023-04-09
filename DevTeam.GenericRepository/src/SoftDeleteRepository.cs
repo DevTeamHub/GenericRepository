@@ -1,4 +1,4 @@
-﻿using DevTeam.EntityFrameworkExtensions;
+﻿using DevTeam.Extensions.EntityFramework;
 using System.Linq;
 
 namespace DevTeam.GenericRepository
